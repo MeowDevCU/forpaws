@@ -1,4 +1,3 @@
-import logo from './assets/logo.svg';
 import './App.css';
 import Nav from './nav.js';
 import Post from './post.js';
