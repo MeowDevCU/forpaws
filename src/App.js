@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import logo from './assets/logo.svg';
 import './App.css';
+import Nav from './nav.js';
+import Post from './post.js';
+import WhoToFollow from './who-to-follow.js';
 
 function App() {
   return (
     <div className="App">
+      
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Forpaws</h1>
       </header>
+      
+      <nav>
+        <Nav />
+      </nav>
+      
+      
+      <main>
+      
+        <div className="feed">
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+        </div>
+
+        <div className="who-to-follow">
+          <h3>Who to follow</h3>
+          <WhoToFollow/>
+          <WhoToFollow/>
+          <WhoToFollow/>
+         </div>
+
+      </main>
     </div>
   );
 }
