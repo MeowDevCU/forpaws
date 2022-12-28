@@ -10,8 +10,7 @@ const Nav = () => {
     return (
         <form action=''>
           <div></div>
-        
-          
+         
           <div>
             <input type="radio" id="search" name="nav" value="search" />
             <img src={search} className="search-logo" alt="search logo"/>
