@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
     --purple:#C3BCF0;
@@ -6,5 +7,11 @@
 }
   
 * {
-margin: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
+
+body {
+    background-color: rgb(247, 247, 247);
+}
+ 

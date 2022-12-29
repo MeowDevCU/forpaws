@@ -2,16 +2,17 @@
 .post {
     border-width: 20px;
     border-radius: 20px;
-    margin-bottom: 30px;
+    margin-bottom: fit-content;
     max-width: 400px;
-    padding: 20px;
     position: relative;
     left: 200px;
-    background: radial-gradient(100% 98.4% at 0% 1.8%, rgba(195, 188, 240, 0.5) 0%, rgba(173, 240, 255, 0.5) 48.44%, rgba(245, 209, 167, 0.5) 100%);  
+    /*border-color: radial-gradient(100% 98.4% at 0% 1.8%, rgba(195, 188, 240, 0.5) 0%, rgba(173, 240, 255, 0.5) 48.44%, rgba(245, 209, 167, 0.5) 100%);  */
+    background-color: var(--purple)
   }
-  
+
 .postImg {
     border-radius:10px;
+    margin: 1px;
   }
   
 .caption {
