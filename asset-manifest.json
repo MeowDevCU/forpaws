@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/forpaws/static/css/main.a7bd661a.css",
-    "main.js": "/forpaws/static/js/main.a0235d0f.js",
+    "main.css": "/forpaws/static/css/main.2be46ca6.css",
+    "main.js": "/forpaws/static/js/main.e490a4db.js",
     "static/js/787.54637de9.chunk.js": "/forpaws/static/js/787.54637de9.chunk.js",
     "static/media/Messages.svg": "/forpaws/static/media/Messages.eb36ae564df03c1b5ba7f7e016d59090.svg",
     "static/media/Search.svg": "/forpaws/static/media/Search.e944bbc90b699ea15108114bd7a04484.svg",
     "static/media/Friends.svg": "/forpaws/static/media/Friends.d9592315b00a9477c128769f92dbe9f5.svg",
     "static/media/Home.svg": "/forpaws/static/media/Home.8d78ae6c1efef1b2083646c932764173.svg",
     "index.html": "/forpaws/index.html",
-    "main.a7bd661a.css.map": "/forpaws/static/css/main.a7bd661a.css.map",
-    "main.a0235d0f.js.map": "/forpaws/static/js/main.a0235d0f.js.map",
+    "main.2be46ca6.css.map": "/forpaws/static/css/main.2be46ca6.css.map",
+    "main.e490a4db.js.map": "/forpaws/static/js/main.e490a4db.js.map",
     "787.54637de9.chunk.js.map": "/forpaws/static/js/787.54637de9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7bd661a.css",
-    "static/js/main.a0235d0f.js"
+    "static/css/main.2be46ca6.css",
+    "static/js/main.e490a4db.js"
   ]
 }
