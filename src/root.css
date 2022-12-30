@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-    --purple:#C3BCF0;
-    
+    --purple: #C3BCF0;
+    --darkpurple: #7c77a0;
+
 }
-  
+
 * {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(241, 241, 241);
 }
- 

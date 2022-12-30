@@ -6,15 +6,15 @@ form {
   align-items: center;
   height: 100vh;
   display: grid;
-  grid-template: 1.2fr repeat(4, 1fr) 0.7fr/ 1fr ;
-  width: 100px;
+  grid-template: 1.5fr repeat(3, 1fr) 0.7fr/ 1fr;
+  width: 100%;
   position: absolute;
   bottom: 0px;
 }
 
 form div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
 }
 
@@ -25,7 +25,39 @@ input {
   opacity: 0%;
 }
 
-form img{
+form img {
+  margin: 10px 20px;
   width: 50px;
 }
 
+.profile {
+  justify-content: center;
+  align-items: center;
+
+}
+
+.pfp-info {
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.outer-userPFP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: radial-gradient(100% 98.4% at 0% 1.8%, rgb(195, 188, 240) 35%, rgb(173, 240, 255) 70%, rgb(245, 209, 167) 125%);
+  text-align: center;
+  margin: 20px auto;
+}
+
+.userPFP {
+  width: 70px;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+}

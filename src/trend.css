@@ -1,0 +1,17 @@
+/* Made by Amilesh 29/12/2022 */
+.tag {
+    border-radius: 10px;
+    font-size: medium;
+    margin: auto;
+    cursor: pointer;
+    height: 25px;
+    background-color: var(--purple);
+    border-style: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.tag:hover {
+    color: white;
+}
