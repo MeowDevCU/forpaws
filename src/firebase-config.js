@@ -1,8 +1,11 @@
 import firebase from "firebase/compat/app";
-import { initializeApp } from "firebase/app";
+import 'firebase/compat/firestore';
+import 'firebase/compat/auth';
+import 'firebase/compat/storage';
 
 
-const firebaseApp = firebase.initalizeApp({
+
+const firebaseApp = firebase.initializeApp({
     apiKey: "AIzaSyDX2z20Nyl5g8pLJjIqBf5CBqRmzr1Ha_8",
     authDomain: "meowdev-forpaws.firebaseapp.com",
     projectId: "meowdev-forpaws",
@@ -17,4 +20,4 @@ const db = firebaseApp.firestore();
 const auth = firebase.auth();
 const storage = firebase.storage();
 
-export { db, auth, storage };
+export { db,auth,storage };

@@ -1,4 +1,4 @@
-.post-border {
+.newpost-border {
   background: var(--gradient);
   margin-bottom: 40px;
   border-radius: 20px;
@@ -8,15 +8,15 @@
   left: 40%;
 }
 
-.post {
+.newpost {
   background-color: white;
+  border: 2px solid var(--purple);
   border-radius: 20px;
   padding-top: 20px;
-  border: 2px solid var(--purple);
   position: relative;
 }
 
-.postImg {
+.newpostImg {
   display: inline;
   margin-left: 20px;
   margin-right: 20px;

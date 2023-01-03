@@ -3,9 +3,9 @@ import "./newpost.css";
 
 const NewPost = () => {
    return (
-      <div class="post-border">
-         <div class="post">
-            <div class="postImg">
+      <div className="newpost-border">
+         <div className="newpost">
+            <div className="newpostImg">
                <input type="file" id="imageLoader" name="imageLoader" />
             </div>
             

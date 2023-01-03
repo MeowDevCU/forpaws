@@ -1,4 +1,4 @@
-/* Made by Neel 27/12/2022*/
+/*Made by Neel 27/12/2022*/
 import "./post.css";
 
 const Post = (props) => {
@@ -74,28 +74,3 @@ const Post = (props) => {
 };
 
 export default Post;
-
-/*
-  <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
-    <lord-icon
-    src="https://cdn.lordicon.com/pnhskdva.json"
-    trigger="click"
-    style="width:250px;height:250px">
-    </lord-icon>
-
-    <lord-icon
-        src="https://cdn.lordicon.com/gigfpovs.json"
-        trigger="click"
-        colors="primary:#121331"
-        state="morph-1"
-        style="width:250px;height:250px">
-    </lord-icon>
-
-    <lord-icon
-        src="https://cdn.lordicon.com/hpivxauj.json"
-        trigger="click"
-        colors="primary:#121331"
-        state="hover"
-        style="width:250px;height:250px">
-    </lord-icon>
-*/
