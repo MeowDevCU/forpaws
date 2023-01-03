@@ -1,4 +1,4 @@
-# Getting Started with Create React Appppp
+# Getting Started with Create React App
 
 See a preview! [https://meowdevcu.github.io/forpaws/](https://meowdevcu.github.io/forpaws/)
 
