@@ -3,6 +3,7 @@
     border-width: 20px;
     border-radius: 20px;
     margin-bottom: fit-content;
+    padding: 20px;
     max-width: 400px;
     position: relative;
     left: 200px;
@@ -12,7 +13,7 @@
 
 .postImg {
     border-radius:10px;
-    margin: 1px;
+    margin: 20px;
   }
   
 .caption {
