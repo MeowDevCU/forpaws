@@ -12,6 +12,7 @@ const Friends = () => {
          setPosts(snapshot.docs.map(doc =>  
           doc.data()));
           
+          
       });
    }, []);
 
