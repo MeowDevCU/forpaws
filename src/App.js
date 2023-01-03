@@ -1,38 +1,22 @@
-import './App.css';
-import Nav from './nav.js';
-import Post from './post.js';
-import WhoToFollow from './who-to-follow.js';
+import "./App.css";
+import Nav from "./Nav/nav";
+import Friends from "./Friends/friends"
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      
       <header className="App-header">
         <h1>Forpaws</h1>
       </header>
-      
-      <nav>
+
+      <Router>
         <Nav />
-      </nav>
-      
-      
-      <main>
-      
-        <div className="feed">
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-        </div>
+        <Routes>
+          <Route path="/" element={<Friends/>}/>
+        </Routes>
+      </Router>
 
-        <div className="who-to-follow">
-          <h3>Who to follow</h3>
-          <WhoToFollow/>
-          <WhoToFollow/>
-          <WhoToFollow/>
-         </div>
-
-      </main>
     </div>
   );
 }

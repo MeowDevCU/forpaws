@@ -1,0 +1,60 @@
+@import "../root.css";
+
+.nav-menu-items{
+  all: unset;
+  position: flex;
+  align-items: center;
+  height: 100vh;
+  display: grid;
+  grid-template: 1.5fr repeat(4, 1fr) / 1fr;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.nav-text a{
+   all: unset;
+   cursor: pointer;
+   color: var(--darkpurple);
+   display: flex;
+   align-items: center;
+   margin: 0 15%;
+}
+
+.nav-icon {
+   width: 30px;
+   height: 30px;
+   margin: 0 10px;
+}
+
+.profile {
+  justify-content: center;
+  align-items: center;
+
+}
+
+.pfp-info {
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.outer-userPFP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: radial-gradient(100% 98.4% at 0% 1.8%, rgb(195, 188, 240) 35%, rgb(173, 240, 255) 70%, rgb(245, 209, 167) 125%);
+  text-align: center;
+  margin: 20px auto;
+}
+
+.userPFP {
+  width: 70px;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+}
