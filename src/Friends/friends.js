@@ -1,11 +1,45 @@
 import Post from "./post.js";
 import WhoToFollow from "./who-to-follow.js";
 import Trend from "./trend.js";
+import React, {useEffect,useState} from 'react';
+import {db} from '../firebase-config.js';
+
+
 
 const Friends = () => {
+
+  const [posts,setPosts] = useState([
+    {
+      pfp:"https://resizing.flixster.com/2zhQizNWcHGBt2OAvgFyMEckbLc=/300x300/v2/https://flxt.tmsimg.com/assets/p36086_p_v8_aa.jpg",
+      username:"NEWUSERRRR",
+      link:"https://pbs.twimg.com/profile_images/1568434017334337537/Vn1qmVlT_400x400.jpg",
+      caption:"caption"
+    },
+    {
+      pfp:"https://preview.redd.it/lxnhuv7l4za71.jpg?auto=webp&s=43980cf4f864c7344903a39adcc8fef988d377ff",
+      username:"coconut_doggy",
+      link:"https://external-preview.redd.it/V5bU4RPx7sI6WPvXoYx5P1Y4MXxCnWqXA6r5_MQtO3Q.jpg?auto=webp&s=df7e02a40953745419d4bd7e1ee52cb5f0f81148",
+      caption:"just got my g2"
+    }
+  ]);
+
+  useEffect(() => {
+
+  },[]);
+
+
+
+
   return (
     <>
+    
+
       <div className="feed">
+      {
+      posts.map(post =>{
+        <Post pfp={post.pfp} username={post.username} link={post.link} caption={post.caption} />
+      })
+    }
           <Post
             pfp="https://resizing.flixster.com/2zhQizNWcHGBt2OAvgFyMEckbLc=/300x300/v2/https://flxt.tmsimg.com/assets/p36086_p_v8_aa.jpg"
             username="funkymonkey"

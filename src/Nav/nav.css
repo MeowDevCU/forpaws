@@ -6,7 +6,7 @@
   align-items: center;
   height: 100vh;
   display: grid;
-  grid-template: 1.5fr repeat(4, 1fr) / 1fr;
+  grid-template: 2fr repeat(4, 1fr) 1.5fr/ 1fr;
   width: 100%;
   position: absolute;
   bottom: 0px;

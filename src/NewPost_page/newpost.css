@@ -1,0 +1,38 @@
+.post-border {
+  background: var(--gradient);
+  margin-bottom: 40px;
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+  border: 2px solid var(--purple);
+  left: 40%;
+}
+
+.post {
+  background-color: white;
+  border-radius: 20px;
+  padding-top: 20px;
+  border: 2px solid var(--purple);
+  position: relative;
+}
+
+.postImg {
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+#imageLoader {
+  text-align: center;
+  border: dashed 3px var(--purple);
+  width: 15vw;
+  height: 15vw;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 5em;
+  cursor: pointer;
+}

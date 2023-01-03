@@ -1,0 +1,17 @@
+.search_bar {
+    overflow: hidden;
+    width: 350px;
+    margin: auto;
+  }  
+
+  .search_bar input[type=text] {
+    float: center;
+    width: 180px;
+    height:10px;
+    padding: 6px;
+    border-radius: 14px;
+    border: 1.5px solid rgba(200, 200, 200, 0.993);
+    font-size: 14px;
+    padding-left: 22px;
+  }
+  

@@ -1,8 +1,7 @@
 /* Made by Neel 27/12/2022 */
 
 .post-border {
-
-  background: radial-gradient(100% 98.4% at 0% 1.8%, rgba(195, 188, 240, 0.5) 0%, rgba(173, 240, 255, 0.5) 48.44%, rgba(245, 209, 167, 0.5) 100%);
+  background: var(--gradient);
   margin-bottom: 40px;
   border-radius: 20px;
   max-width: fit-content;
@@ -122,8 +121,6 @@ a:hover {
 img {
   border-radius: 10px;
 }
-
-
 
 .caption {
   padding-top: 5px;
