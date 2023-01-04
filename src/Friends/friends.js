@@ -6,25 +6,35 @@ import { db } from "../firebase-config.js";
 
 const Friends = () => {
    const [posts, setPosts] = useState([]);
-
+   
+   
    useEffect(() => {
       db.collection("posts").onSnapshot(snapshot => {
-         setPosts(snapshot.docs.map(doc =>  
-          doc.data()));
-          
-      });
+         setPosts(snapshot.docs.map(doc => ({
+            id : doc.id,
+            post: doc.data()
+         })
+         
+         ));     
+      })
    }, []);
+
+
+   
+   
 
    return (
       <>
          <div className="feed">
+            
             {posts.map((post) => {
-               return (
+               return (        
                   <Post
-                     pfp={post.pfp}
-                     username={post.username}
-                     link={post.link}
-                     caption={post.caption}
+                     key={post.id}
+                     pfp={post.post.pfp}
+                     username={post.post.username}
+                     link={post.post.link}
+                     caption={post.post.caption}
                   />
                );
             })}
