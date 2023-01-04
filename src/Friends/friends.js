@@ -54,13 +54,13 @@ const Friends = () => {
                username="chonkychutney"
                pfp="https://media.tenor.com/1NRoxR1fXngAAAAi/hug-cat.gif"
             />
-         </div>
-
-         <div className="trending">
+            <br/>
             <h3>What's Trending</h3>
             <Trend tag="playboi capybara" />
             <Trend tag="Sussycats" />
          </div>
+
+         
       </>
    );
 };
