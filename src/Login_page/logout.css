@@ -1,0 +1,15 @@
+.logout-wrapper{
+    max-width: fit-content;
+    text-align: center;
+    margin: auto;
+    margin-top: 200px;
+    
+
+}
+
+.logout-button{
+    background-color: white;
+    padding:10px;
+    cursor: pointer;
+    border-radius: 10px;
+}

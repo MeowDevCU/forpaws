@@ -1,18 +1,18 @@
+
 .newpost-border {
   background: var(--gradient);
-  margin-bottom: 40px;
   border-radius: 20px;
+  max-width: fit-content;
   padding: 10px;
-  position: relative;
   border: 2px solid var(--purple);
-  left: 40%;
+  margin: 40px auto;
+  margin-top: 100px;
 }
 
 .newpost {
   background-color: white;
   border: 2px solid var(--purple);
   border-radius: 20px;
-  padding-top: 20px;
   position: relative;
 }
 

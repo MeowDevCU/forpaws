@@ -8,7 +8,6 @@ const NewPost = () => {
             <div className="newpostImg">
                <input type="file" id="imageLoader" name="imageLoader" />
             </div>
-            
          </div>
       </div>
    );

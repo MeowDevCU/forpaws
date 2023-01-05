@@ -3,6 +3,7 @@ import WhoToFollow from "./who-to-follow.js";
 import Trend from "./trend.js";
 import React, { useEffect, useState } from "react";
 import { db } from "../firebase-config.js";
+import Login from "../Login_page/login.js";
 
 const Friends = () => {
    const [posts, setPosts] = useState([]);
@@ -19,9 +20,6 @@ const Friends = () => {
       })
    }, []);
 
-
-   
-   
 
    return (
       <>
