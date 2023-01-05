@@ -4,7 +4,7 @@
 
 :root {
     --shadowBlue: rgba(45, 121, 137, 0.19);
-    --gradient: radial-gradient(100% 98.4% at 0% 1.8%,  rgba(173, 240, 255, 0.5) 30%, rgba(245, 209, 167, 0.5) 100%);
+    --gradient: radial-gradient(100% 98.4% at 0% 1.8%, rgba(173, 240, 255, 0.5) 30%, rgba(245, 209, 167, 0.5) 100%);
     --purple: #C3BCF0;
     --darkpurple: #7c77a0;
 
@@ -13,4 +13,16 @@
 * {
     margin: 0;
     font-family: 'Inter', sans-serif;
+}
+
+.gradient-border {
+    background: var(--gradient);
+    border-radius: 20px;
+    max-width: fit-content;
+    padding: 10px;
+}
+
+.internal {
+    position: relative;
+    margin: 20px;
 }

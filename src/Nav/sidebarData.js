@@ -28,11 +28,5 @@ export const SidebarData = [
       path: "/newPost",
       icon:<AiIcons.AiFillPlusCircle className="nav-icon"/>,
       cName: "nav-text"
-   },
-   {
-      title: "logout",
-      path: "/logout",
-      icon:<FiIcons.FiLogOut className="nav-icon"/>,
-      cName: "nav-text"
    }
 ];

@@ -1,17 +1,16 @@
+@import "../root.css";
+
+.newpost-margin {
+  margin: 120px;
+}
 
 .newpost-border {
-  background: var(--gradient);
-  border-radius: 20px;
   max-width: fit-content;
   padding: 10px;
-  border: 2px solid var(--purple);
-  margin: 40px auto;
-  margin-top: 100px;
+  margin: auto;
 }
 
 .newpost {
-  background-color: white;
-  border: 2px solid var(--purple);
   border-radius: 20px;
   position: relative;
 }

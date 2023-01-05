@@ -1,24 +1,24 @@
 /* Made by Aashna 27/12/2022 */
 import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
+import * as FiIcons from "react-icons/fi";
 import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./sidebarData";
+import Logout from "../Login_page/logout";
 
 import "./nav.css";
 
 const Nav = () => {
-   const [sidebar, setsidebar] = useState(false);
-   const showSidebar = () => setsidebar(!sidebar);
+
+   const log_user_out =()=>{
+      localStorage.clear()
+      window.location.reload()
+  }
 
    return (
       <>
-         <div className="navbar">
-            <Link to="#" className="menu-bars">
-               <FaIcons.FaBars onClick={showSidebar} />
-            </Link>
-         </div>
-         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+         <nav>
             <ul className="nav-menu-items">
                <li className="navbar-toggle">
                   <div className="profile ">
@@ -44,6 +44,13 @@ const Nav = () => {
                      </li>
                   );
                })}
+               <li className= "nav-text">
+                     <Link 
+                     onClick={log_user_out}>
+                     <FiIcons.FiLogOut className="nav-icon"/>
+                        <span>logout</span>
+                     </Link>
+               </li>
             </ul>
          </nav>
       </>
@@ -51,3 +58,18 @@ const Nav = () => {
 };
 
 export default Nav;
+/*
+const Logout = () => {
+   const log_user_out =()=>{
+       localStorage.clear()
+       window.location.reload()
+   }
+
+   return (        
+   <div className="logout-wrapper">
+       <button className="logout-button" onClick={log_user_out}>Logout</button>
+   </div>
+
+   );
+}
+*/

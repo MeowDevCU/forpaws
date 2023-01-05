@@ -5,8 +5,8 @@ const Post = (props) => {
   const { link, pfp, username, caption, profileurl } = props;
 
   return (
-    <div className="post-border">
-      <div className="post">
+    <div className="gradient-border post-border">
+      <div className="internal post">
         <div className="postImg">
           <img src={link} />
           <div className="buttons">
