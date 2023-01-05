@@ -8,17 +8,6 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
   var user = getAuth().currentUser;
 
-  useEffect(() => {
-    db.collection("posts").onSnapshot((snapshot) => {
-      setPosts(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          post: doc.data(),
-        }))
-      );
-    });
-  }, []);
-
   return (
     <>
       {/*condition ? true_expression : false_expression*/}
