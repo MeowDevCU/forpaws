@@ -1,10 +1,10 @@
 /* Made by Aashna, Amilesh, Neel 27/12/2022 */
 import React, { useState, useEffect } from "react";
-import Nav from "../Nav/nav.js";
 import { auth, provider } from "../firebase-config";
 import { getAuth, signInWithPopup } from "firebase/auth";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Friends from "../Friends_page/friends";
+import { Link } from "react-router-dom";
+import * as FaIcons from "react-icons/fa";
+import * as AiIcons from "react-icons/ai";
 import "./login.css";
 
 const Login = () => {
@@ -25,6 +25,7 @@ const Login = () => {
         localStorage.setItem("name", data.user.displayName);
       });
     };
+
     useEffect(() => {
       setValue(localStorage.getItem("email"));
       console.log(value);
@@ -41,78 +42,78 @@ const Login = () => {
       <>
         <header>
           <div className="header-items">
-            <Link to="/">
-              home
-            </Link>
-            <div></div>
+            <div><Link to="/"><AiIcons.AiFillHome className="nav-icon home" /></Link>
+            </div><div></div>
             <h1>Forpaws</h1>
           </div>
         </header>
-        <div className=" login-background">
 
-
-          <div className="login" onSubmit={signUp}>
-            <h4>Login</h4>
-            <form id="login-form">
-              <input
-                className="input-long"
-                type="text"
-                placeholder="username"
-                defaultValue={username}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <input
-                className="input-long"
-                type="text"
-                placeholder="email"
-                defaultValue={email}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <input className="dark-btn" type="submit" value="LOGIN" />
-            </form>
-            <div className="extra-login_-options">
-              <button className="google-btn" onClick={handleClick} />
+        <div id="login-page">
+          <div className=" login-background">
+            <div className="login" onSubmit={signUp}>
+              <h4>Login</h4>
+              <form className="login-form">
+                <input
+                  type="text"
+                  placeholder="username"
+                  defaultValue={username}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="email"
+                  defaultValue={email}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <input className="light-btn" type="submit" value="LOGIN" />
+              </form>
+              <div className="extra-login-options">
+                <div className="google-btn" onClick={handleClick} ><FaIcons.FaGoogle className="nav-icon" /></div>
+                <div className="google-btn" onClick={handleClick} ><FaIcons.FaFacebookF className="nav-icon" /></div>
+              </div>
             </div>
-          </div>
 
-          <div className="signup">
-            <h4>Sign Up</h4>
-            <form id="login-form">
-              <input
-                className="input-short"
-                type="text"
-                placeholder="firstname"
-              />
-              <input
-                className="input-short"
-                type="text"
-                placeholder="lastname"
-              />
-              <input
-                className="input-long"
-                type="text"
-                placeholder="username"
-                defaultValue={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-              <input
-                className="input-long"
-                type="text"
-                placeholder="password"
-                defaultValue={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <input
-                className="input-long"
-                type="text"
-                placeholder="password"
-                defaultValue={email}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <input className="dark-btn" type="submit" value="LOGIN" />
-            </form>
-            <div className="extra-login_-options">
-              <button className="google-btn" onClick={handleClick} />
+            <div className=" signup-background">
+              <div className="signup">
+                <h4>SignUp</h4>
+                <form className="signup-form">
+                  <div className="input-short"><input
+                    type="text"
+                    placeholder="firstname"
+                  />
+                    <input
+                      type="text"
+                      placeholder="lastname"
+                    /></div>
+                  <input
+                    type="text"
+                    placeholder="username"
+                    defaultValue={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+                  <input
+                    type="text"
+                    placeholder="email"
+                    defaultValue={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <input
+                    type="text"
+                    placeholder="password"
+                    defaultValue={email}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <input
+                    className="dark-btn"
+                    type="submit"
+                    value="SIGNUP"
+                  />
+                </form>
+                <div className="extra-login-options">
+                  <div className="google-btn" onClick={handleClick} ><FaIcons.FaGoogle className="nav-icon" /></div>
+                  <div className="google-btn" onClick={handleClick} ><FaIcons.FaFacebookF className="nav-icon" /></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

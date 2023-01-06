@@ -16,7 +16,7 @@ const Home = () => {
             <h1>Forpaws</h1>
          </div></header>
          {getAuth().currentUser != null ? <Nav /> : <Link to="..\login">
-            <div className=" dark-btn login-btn">Login/signup</div>
+            <div className=" dark-btn login-btn">LOGIN/SIGNUP</div>
          </Link>}
          { }
       </>

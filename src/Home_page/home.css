@@ -4,7 +4,10 @@
    color: white;
    position: absolute;
    z-index: 1;
-   font-size: 18px;
+   letter-spacing: 5px;
+   font-size: 0.8em;
+   font-weight: bold;
+   text-shadow: 0 2px 2px var(--shadowBlue);
    margin: 30px;
-   padding: 7px 40px;
+   padding: 9px 40px;
 }

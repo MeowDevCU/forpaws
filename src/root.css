@@ -27,8 +27,10 @@
 }
 
 input[type="text"] {
+    letter-spacing: 1px;
+    width: calc(100% - 30px);
     border: unset;
-    padding: 6px;
+    padding: 6px 15px;
     border-radius: 30px;
     font-size: 14px;
 }
@@ -39,7 +41,15 @@ input[type="text"]:focus {
 }
 
 .dark-btn {
+    border: none;
     background: linear-gradient(93.9deg, #c3bcf0 0%, #7ce7ff 100%);
+    box-shadow: 0px 4px 4px var(--shadowBlue);
+    border-radius: 40px;
+}
+
+.light-btn {
+    border: none;
+    background: linear-gradient(93.9deg, #7CE7FF 0%, #FFBB6A 100%);
     box-shadow: 0px 4px 4px var(--shadowBlue);
     border-radius: 40px;
 }

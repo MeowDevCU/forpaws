@@ -19,7 +19,7 @@ export const SidebarData = [
    },
    {
       title: "messages",
-      path: "/login",
+      path: "/messages",
       icon: <IoIcons.IoMdChatbubbles className="nav-icon" />,
       cName: "nav-text"
    },
