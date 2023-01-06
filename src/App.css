@@ -2,101 +2,99 @@
 @import "root.css";
 
 header {
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  background: radial-gradient(100% 100% at 0% 0%, #ADF0FF 0%, rgba(173, 240, 255, 0) 82.81%), radial-gradient(100% 100% at 100% 8.56%, #FFBB6A 0%, rgba(255, 187, 106, 0) 81.25%);
-  width: 100%;
-  height: 200px;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   height: 200px;
+   z-index: 1;
+}
+
+.App-header {
+   background-image: radial-gradient(
+         100% 100% at 0% 0%,
+         #adf0ff 0%,
+         transparent 90%
+      ),
+      radial-gradient(100% 100% at 100% 0%, #ffd29c 0%, transparent 90%);
 }
 
 .header-items {
-  display: grid;
-  grid-template: 1fr /repeat(3, 1fr);
-  grid-area: 1fr / 1fr 2fr 1fr;
+   display: grid;
+   grid-template: 1fr / repeat(3, 1fr);
+   grid-area: 1fr / 1fr 2fr 1fr;
 }
 
 h1 {
-  color: white;
-  font-family: 'Chewy', cursive;
-  font-weight: lighter;
-  font-size: 50px;
-  margin: 20px 30px 0;
-  text-align: right;
+   color: white;
+   font-family: "Chewy", cursive;
+   font-weight: lighter;
+   font-size: 50px;
+   margin: 20px 30px 0;
+   text-align: right;
 }
 
 .who-to-follow {
-  padding: 1rem;
-  float: right;
-  background: var(--gradient);
-  border-radius: 20px;
-  line-height: 30px;
-  position: fixed;
-  top: 9em;
-  right: 20px;
-  width: 15rem;
-  min-height: 15rem;
+   padding: 1rem;
+   float: right;
+   background: var(--gradient);
+   border-radius: 20px;
+   line-height: 30px;
+   position: fixed;
+   top: 9em;
+   right: 20px;
+   width: 15rem;
+   min-height: 15rem;
 }
 
 .trending {
-  padding: 1rem;
-  float: right;
-  background: var(--gradient);
-  border-radius: 20px;
-  line-height: 30px;
-  position: fixed;
-  top: 30em;
-  right: 20px;
-  width: 15rem;
-  min-height: 15rem;
+   padding: 1rem;
+   float: right;
+   background: var(--gradient);
+   border-radius: 20px;
+   line-height: 30px;
+   position: fixed;
+   top: 30em;
+   right: 20px;
+   width: 15rem;
+   min-height: 15rem;
 }
 
-@media screen and (max-width:1100px) {
-  .who-to-follow {
-    visibility: hidden;
-  }
+@media screen and (max-width: 1100px) {
+   .who-to-follow {
+      visibility: hidden;
+   }
 
-  .trending {
-    visibility: hidden;
-  }
-
+   .trending {
+      visibility: hidden;
+   }
 }
 
 nav {
-  position: fixed;
-  top: 0;
-  width: 15%;
-  height: 100vh;
-  background-color: #ffffff48;
-  box-shadow: 4px 0px 10px var(--shadowBlue);
-  border-radius: 0px 40px 40px 0px;
+   z-index: 2;
+   position: fixed;
+   top: 0;
+   width: 15%;
+   height: 100vh;
+   background-color: #ffffff48;
+   box-shadow: 4px 0px 10px var(--shadowBlue);
+   border-radius: 0px 40px 40px 0px;
 }
 
 h3 {
-  margin-bottom: 15px;
+   margin-bottom: 15px;
 }
 
 .feed {
-  margin-top: 144px;
+   margin-top: 144px;
 }
 
 /* Made by Hadi 01/03/2023 */
 .search_bar form {
-  padding-top: 32px;
+   padding-top: 32px;
 }
 
-.search_bar input[type=text] {
-  border: unset;
-  box-shadow: 0 1px 4px 0 var(--shadowBlue);
-  width: calc(100% - 12px);
-  float: center;
-  height: 25px;
-  padding: 6px;
-  border-radius: 30px;
-  font-size: 14px;
-}
-
-.search_bar input[type=text]:focus {
-  outline: unset;
-  outline: 1px solid var(--purple);
+.search_bar input[type="text"] {
+   box-shadow: 0 1px 4px 0 var(--shadowBlue);
+   width: calc(100% - 12px);
+   height: 25px;
 }

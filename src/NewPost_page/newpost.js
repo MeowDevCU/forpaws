@@ -9,8 +9,16 @@ const NewPost = () => {
   const handleImage = (e) => {
     setImage(URL.createObjectURL(e.target.files[0]));
   };
+
   return (
     <>
+      <header className="App-header">
+        <div className="header-items">
+          <div></div>
+          <div></div>
+          <h1>Forpaws</h1>
+        </div>
+      </header>
       <Nav />
       <div className="newpost-margin">
         <div className="gradient-border newpost-border">

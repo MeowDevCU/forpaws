@@ -1,21 +1,26 @@
+import "./home.css";
 import Nav from "../Nav/nav";
-import React, { useEffect, useState } from "react";
-import { auth, db } from "../firebase-config.js";
+import { Link } from "react-router-dom";
 import { getAuth } from "firebase/auth";
-import Login from "../Login_page/login.js";
 
 const Home = () => {
-  const [posts, setPosts] = useState([]);
-  var user = getAuth().currentUser;
-
-  return (
-    <>
-      {/*condition ? true_expression : false_expression*/}
-      {user != null ? <Nav /> : <div></div>}
-      {console.log(user)}
-      <div></div>
-    </>
-  );
+   return (
+      <>
+         <header className="App-header"><div className="header-items">
+            <div></div>
+            <div className="search_bar">
+               <form name="search">
+                  <input type="text" placeholder="Search"></input>
+               </form>
+            </div>
+            <h1>Forpaws</h1>
+         </div></header>
+         {getAuth().currentUser != null ? <Nav /> : <Link to="..\login">
+            <div className=" dark-btn login-btn">Login/signup</div>
+         </Link>}
+         { }
+      </>
+   );
 };
 
 export default Home;

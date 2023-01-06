@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 :root {
     --shadowBlue: rgba(45, 121, 137, 0.19);
     --gradient: radial-gradient(100% 98.4% at 0% 1.8%, rgba(173, 240, 255, 0.5) 30%, rgba(245, 209, 167, 0.5) 100%);
-    --purple: #C3BCF0;
+    --purple: #c3bcf0;
     --darkpurple: #7c77a0;
-
 }
 
 * {
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .gradient-border {
@@ -25,4 +24,22 @@
 .internal {
     position: relative;
     margin: 20px;
+}
+
+input[type="text"] {
+    border: unset;
+    padding: 6px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus {
+    outline: unset;
+    outline: 1px solid var(--purple);
+}
+
+.dark-btn {
+    background: linear-gradient(93.9deg, #c3bcf0 0%, #7ce7ff 100%);
+    box-shadow: 0px 4px 4px var(--shadowBlue);
+    border-radius: 40px;
 }

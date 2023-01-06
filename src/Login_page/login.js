@@ -39,47 +39,80 @@ const Login = () => {
 
     return (
       <>
-        <Nav />
-        <div className="gradient-border login-border">
-          <Link to="/">
-            <span>friends</span>
-          </Link>
-          <div className="internal login-border-white">
-            <div className="login">
-              <h3>Login</h3>
-              {value ? (
-                <></>
-              ) : (
-                <button className="google-btn" onClick={handleClick}>
-                  Sign In With Google
-                </button>
-              )}
-              <h3>You are {value ? "logged in" : "not logged in"}</h3>
-              <br />
-              <h3>Sign Up</h3>
-              <form>
-                <input
-                  type="text"
-                  placeholder="username"
-                  defaultValue={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                />
-                <input
-                  type="text"
-                  placeholder="email"
-                  defaultValue={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <input
-                  type="password"
-                  placeholder="password"
-                  defaultValue={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <button type="submit" onClick={signUp}>
-                  sign up
-                </button>
-              </form>
+        <header>
+          <div className="header-items">
+            <Link to="/">
+              home
+            </Link>
+            <div></div>
+            <h1>Forpaws</h1>
+          </div>
+        </header>
+        <div className=" login-background">
+
+
+          <div className="login" onSubmit={signUp}>
+            <h4>Login</h4>
+            <form id="login-form">
+              <input
+                className="input-long"
+                type="text"
+                placeholder="username"
+                defaultValue={username}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                className="input-long"
+                type="text"
+                placeholder="email"
+                defaultValue={email}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <input className="dark-btn" type="submit" value="LOGIN" />
+            </form>
+            <div className="extra-login_-options">
+              <button className="google-btn" onClick={handleClick} />
+            </div>
+          </div>
+
+          <div className="signup">
+            <h4>Sign Up</h4>
+            <form id="login-form">
+              <input
+                className="input-short"
+                type="text"
+                placeholder="firstname"
+              />
+              <input
+                className="input-short"
+                type="text"
+                placeholder="lastname"
+              />
+              <input
+                className="input-long"
+                type="text"
+                placeholder="username"
+                defaultValue={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <input
+                className="input-long"
+                type="text"
+                placeholder="password"
+                defaultValue={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                className="input-long"
+                type="text"
+                placeholder="password"
+                defaultValue={email}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <input className="dark-btn" type="submit" value="LOGIN" />
+            </form>
+            <div className="extra-login_-options">
+              <button className="google-btn" onClick={handleClick} />
             </div>
           </div>
         </div>

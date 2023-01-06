@@ -1,0 +1,10 @@
+@import "../root.css";
+
+.login-btn {
+   color: white;
+   position: absolute;
+   z-index: 1;
+   font-size: 18px;
+   margin: 30px;
+   padding: 7px 40px;
+}

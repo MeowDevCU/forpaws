@@ -22,6 +22,17 @@ const Friends = () => {
 
   return (
     <>
+      <header className="App-header">
+        <div className="header-items">
+          <div></div>
+          <div className="search_bar">
+            <form name="search">
+              <input type="text" placeholder="Search"></input>
+            </form>
+          </div>
+          <h1>Forpaws</h1>
+        </div>
+      </header>
       <Nav />
       <div className="feed">
         {posts.map((post) => {

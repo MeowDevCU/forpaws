@@ -8,25 +8,25 @@ export const SidebarData = [
    {
       title: "home",
       path: "/home",
-      icon:<AiIcons.AiFillHome className="nav-icon"/>,
+      icon: <AiIcons.AiFillHome className="nav-icon" />,
       cName: "nav-text"
    },
    {
       title: "friends",
-      path: "/",
-      icon:<FaIcons.FaPaw className="nav-icon"/>,
+      path: "/friends",
+      icon: <FaIcons.FaPaw className="nav-icon" />,
       cName: "nav-text"
    },
    {
       title: "messages",
       path: "/login",
-      icon:<IoIcons.IoMdChatbubbles className="nav-icon"/>,
+      icon: <IoIcons.IoMdChatbubbles className="nav-icon" />,
       cName: "nav-text"
    },
    {
       title: "newPost",
       path: "/newPost",
-      icon:<AiIcons.AiFillPlusCircle className="nav-icon"/>,
+      icon: <AiIcons.AiFillPlusCircle className="nav-icon" />,
       cName: "nav-text"
    }
 ];
