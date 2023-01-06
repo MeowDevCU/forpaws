@@ -9,9 +9,7 @@ import "./login.css";
 
 const Login = () => {
   return SignIn();
-  var user = getAuth().currentUser;
-  if (user == null) {
-  }
+
   function SignIn() {
     const [value, setValue] = useState(null);
     const [name, setName] = useState("");

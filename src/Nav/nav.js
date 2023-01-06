@@ -7,21 +7,17 @@ import { Link } from "react-router-dom";
 import { SidebarData } from "./sidebarData";
 import { auth } from "../firebase-config";
 import "./nav.css";
-import { getAuth, signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 
 const Nav = () => {
-  var user = getAuth().currentUser;
-
-  console.log(user);
   const log_user_out = () => {
     try {
       signOut(auth);
       localStorage.clear();
+      alert("You have been logged out");
       window.location.reload();
-      console.log(user);
-      alert("YAY");
     } catch (e) {
-      alert(e);
+      alert("You already logged out");
     }
   };
 
