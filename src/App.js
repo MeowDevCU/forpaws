@@ -9,11 +9,11 @@ function App() {
    return (
       <Router>
          <Routes>
-            <Route path="/" element={<Navigate to="/home" />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/friends" element={<Friends />} />
-            <Route path="/newPost" element={<NewPost />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/forpaws" element={<Navigate to="./home" />} />
+            <Route path="forpaws/home" element={<Home />} />
+            <Route path="forpaws/friends" element={<Friends />} />
+            <Route path="forpaws/newPost" element={<NewPost />} />
+            <Route path="forpaws/login" element={<Login />} />
          </Routes>
       </Router>
    );

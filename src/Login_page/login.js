@@ -1,7 +1,7 @@
 /* Made by Aashna, Amilesh, Neel 27/12/2022 */
 import React, { useState, useEffect } from "react";
 import { auth, provider } from "../firebase-config";
-import { createUserWithEmailAndPassword,signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
@@ -11,17 +11,17 @@ const Login = () => {
   return SignIn();
 
   function SignIn() {
-   //variables for google auth
+    //variables for google auth
     const [value, setValue] = useState(null);
     const [name, setName] = useState("");
 
-   //variables for email/password auth
+    //variables for email/password auth
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState('');
 
 
-   
+
     //google auth function for sign in/sign up(does both bc its google idk)
     const handleClick = () => {
       signInWithPopup(auth, provider).then((data) => {
@@ -46,21 +46,21 @@ const Login = () => {
         .catch((e) => alert(e.message));
     };
     */
-   const signUp = async() =>{
-      try{
-         const user = await createUserWithEmailAndPassword(auth,setEmail,setPassword);
-         console.log(user);
+    const signUp = async () => {
+      try {
+        const user = await createUserWithEmailAndPassword(auth, setEmail, setPassword);
+        console.log(user);
       }
-      catch(error){
-         console.log(error.message);
+      catch (error) {
+        console.log(error.message);
       }
-   }
+    };
 
     return (
       <>
         <header>
           <div className="header-items">
-            <div><Link to="/"><AiIcons.AiFillHome className="nav-icon home" /></Link>
+            <div><Link to="/forpaws"><AiIcons.AiFillHome className="nav-icon home" /></Link>
             </div><div></div>
             <h1>Forpaws</h1>
           </div>
@@ -97,15 +97,15 @@ const Login = () => {
                 <form className="signup-form">
                   <div className="input-short">
                     <input
-                    type="text"
-                    placeholder="firstname"
-                  />
-                  <input
-                    type="textbox"
-                    placeholder="lastname"
-                  />
+                      type="text"
+                      placeholder="firstname"
+                    />
+                    <input
+                      type="textbox"
+                      placeholder="lastname"
+                    />
                   </div>
-                  <input 
+                  <input
                     type="text"
                     placeholder="username"
                     defaultValue={username}
