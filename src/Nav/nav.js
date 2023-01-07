@@ -62,18 +62,4 @@ const Nav = () => {
 };
 
 export default Nav;
-/*
-const Logout = () => {
-   const log_user_out =()=>{
-       localStorage.clear()
-       window.location.reload()
-   }
 
-   return (        
-   <div className="logout-wrapper">
-       <button className="logout-button" onClick={log_user_out}>Logout</button>
-   </div>
-
-   );
-}
-*/

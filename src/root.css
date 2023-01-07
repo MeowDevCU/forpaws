@@ -18,15 +18,20 @@
     background: var(--gradient);
     border-radius: 20px;
     max-width: fit-content;
-    padding: 10px;
+    padding: 12px;
+    border: 2px solid var(--purple);
 }
 
 .internal {
     position: relative;
-    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border-radius: 20px;
+    border: 2px solid var(--purple);
 }
 
-input[type="text"] {
+input[type="text"],input[type="password"],textarea {
     letter-spacing: 1px;
     width: calc(100% - 30px);
     border: unset;
@@ -35,7 +40,7 @@ input[type="text"] {
     font-size: 14px;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,textarea:focus {
     outline: unset;
     outline: 1px solid var(--purple);
 }

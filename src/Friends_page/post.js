@@ -2,13 +2,13 @@
 import "./post.css";
 
 const Post = (props) => {
-  const { link, pfp, username, caption, profileurl } = props;
+  const { imageURL, pfp, username, caption, profileurl } = props;
 
   return (
     <div className="gradient-border post-border">
       <div className="internal post">
         <div className="postImg">
-          <img src={link} />
+          <img src={imageURL} />
           <div className="buttons">
             <svg
               className="heart"

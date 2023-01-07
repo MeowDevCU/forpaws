@@ -41,7 +41,7 @@ const Friends = () => {
               key={post.id}
               pfp={post.post.pfp}
               username={post.post.username}
-              link={post.post.link}
+              imageURL={post.post.imageURL}
               caption={post.post.caption}
             />
           );

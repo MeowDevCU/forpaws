@@ -69,7 +69,7 @@ h4 {
   gap: 20px;
 }
 
-#login-page input[type="text"] {
+#login-page input[type="text"],input[type="password"] {
   height: 25px;
 }
 

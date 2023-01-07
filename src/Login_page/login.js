@@ -1,7 +1,7 @@
 /* Made by Aashna, Amilesh, Neel 27/12/2022 */
 import React, { useState, useEffect } from "react";
 import { auth, provider } from "../firebase-config";
-import { getAuth, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword,signInWithPopup } from "firebase/auth";
 import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
@@ -11,12 +11,18 @@ const Login = () => {
   return SignIn();
 
   function SignIn() {
+   //variables for google auth
     const [value, setValue] = useState(null);
     const [name, setName] = useState("");
+
+   //variables for email/password auth
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState('');
 
+
+   
+    //google auth function for sign in/sign up(does both bc its google idk)
     const handleClick = () => {
       signInWithPopup(auth, provider).then((data) => {
         setValue(data.user.email);
@@ -31,12 +37,24 @@ const Login = () => {
       console.log(value);
     });
 
-    const signUp = (event, email, password) => {
+    //sign up function for regular email and password
+    /*const signUp = (event, email, password) => {
       event.preventDefault();
-      auth
-        .creatUserWithEmailAndPassword(email, password)
-        .catch((error) => alert(error.message));
+        console.log(email);
+        console.log(password);
+        createUserWithEmailAndPassword(auth, email, password)
+        .catch((e) => alert(e.message));
     };
+    */
+   const signUp = async() =>{
+      try{
+         const user = await createUserWithEmailAndPassword(auth,setEmail,setPassword);
+         console.log(user);
+      }
+      catch(error){
+         console.log(error.message);
+      }
+   }
 
     return (
       <>
@@ -57,13 +75,13 @@ const Login = () => {
                   type="text"
                   placeholder="username"
                   defaultValue={username}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(event) => setEmail(event.target.value)}
                 />
                 <input
                   type="text"
                   placeholder="email"
                   defaultValue={email}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(event) => setPassword(event.target.value)}
                 />
                 <input className="light-btn" type="submit" value="LOGIN" />
               </form>
@@ -77,36 +95,39 @@ const Login = () => {
               <div className="signup">
                 <h4>SignUp</h4>
                 <form className="signup-form">
-                  <div className="input-short"><input
+                  <div className="input-short">
+                    <input
                     type="text"
                     placeholder="firstname"
                   />
-                    <input
-                      type="text"
-                      placeholder="lastname"
-                    /></div>
                   <input
+                    type="textbox"
+                    placeholder="lastname"
+                  />
+                  </div>
+                  <input 
                     type="text"
                     placeholder="username"
                     defaultValue={username}
-                    onChange={(e) => setUsername(e.target.value)}
+                    onChange={(event) => setUsername(event.target.value)}
                   />
                   <input
                     type="text"
                     placeholder="email"
                     defaultValue={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(event) => setEmail(event.target.value)}
                   />
                   <input
-                    type="text"
+                    type="password"
                     placeholder="password"
-                    defaultValue={email}
-                    onChange={(e) => setPassword(e.target.value)}
+                    defaultValue={password}
+                    onChange={(event) => setPassword(event.target.value)}
                   />
                   <input
                     className="dark-btn"
-                    type="submit"
-                    value="SIGNUP"
+                    //type="submit" change this back to submit once issue is fixed
+                    defaultValue="SIGNUP"
+                    onClick={signUp}
                   />
                 </form>
                 <div className="extra-login-options">
