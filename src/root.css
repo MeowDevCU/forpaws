@@ -31,7 +31,9 @@
     border: 2px solid var(--purple);
 }
 
-input[type="text"],input[type="password"],textarea {
+input[type="text"],
+input[type="password"],
+textarea {
     letter-spacing: 1px;
     width: calc(100% - 30px);
     border: unset;
@@ -40,9 +42,11 @@ input[type="text"],input[type="password"],textarea {
     font-size: 14px;
 }
 
-input[type="text"]:focus,textarea:focus {
+input[type="text"]:focus,
+textarea:focus {
     outline: unset;
     outline: 1px solid var(--purple);
+    box-shadow: 0 0 10px 0 #7f30ff81;
 }
 
 .dark-btn {
