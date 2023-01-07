@@ -46,9 +46,10 @@ const Login = () => {
         .catch((e) => alert(e.message));
     };
     */
-    const signUp = async () => {
+    const signUp = async (e) => {
+      e.preventDefault();
       try {
-        const user = await createUserWithEmailAndPassword(auth, setEmail, setPassword);
+        const user = await createUserWithEmailAndPassword(auth, email, password);
         console.log(user);
       }
       catch (error) {
@@ -73,14 +74,14 @@ const Login = () => {
               <form className="login-form">
                 <input
                   type="text"
-                  placeholder="username"
-                  defaultValue={username}
+                  placeholder="email"
+                  defaultValue={email}
                   onChange={(event) => setEmail(event.target.value)}
                 />
                 <input
                   type="text"
                   placeholder="email"
-                  defaultValue={email}
+                  defaultValue={password}
                   onChange={(event) => setPassword(event.target.value)}
                 />
                 <input className="light-btn" type="submit" value="LOGIN" />
@@ -94,7 +95,7 @@ const Login = () => {
             <div className=" signup-background">
               <div className="signup">
                 <h4>SignUp</h4>
-                <form className="signup-form">
+                <form onSubmit={signUp} className="signup-form">
                   <div className="input-short">
                     <input
                       type="text"
@@ -125,7 +126,7 @@ const Login = () => {
                   />
                   <input
                     className="dark-btn"
-                    //type="submit" change this back to submit once issue is fixed
+                    type="submit"
                     defaultValue="SIGNUP"
                     onClick={signUp}
                   />
