@@ -9,7 +9,7 @@ function App() {
    return (
       <Router>
          <Routes>
-            <Route path="/forpaws" element={<Navigate to="./home" />} />
+            <Route exact path="/forpaws" element={<Navigate to="./home" />} />
             <Route path="forpaws/home" element={<Home />} />
             <Route path="forpaws/friends" element={<Friends />} />
             <Route path="forpaws/newPost" element={<NewPost />} />

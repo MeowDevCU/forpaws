@@ -3,22 +3,24 @@ import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as FiIcons from "react-icons/fi";
 import * as AiIcons from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SidebarData } from "./sidebarData";
 import { auth } from "../firebase-config";
 import "./nav.css";
 import { signOut } from "firebase/auth";
 
 const Nav = () => {
+  const navigate = useNavigate();
   const log_user_out = () => {
     try {
       signOut(auth);
-      localStorage.clear();
-      alert("You have been logged out");
+      navigate("/forpaws/home");
       window.location.reload();
     } catch (e) {
       alert("You already logged out");
     }
+
+
   };
 
   return (

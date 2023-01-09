@@ -91,8 +91,3 @@ h3 {
 .search_bar form {
    padding-top: 32px;
 }
-
-.search_bar input[type="text"] {
-   box-shadow: 0 1px 4px 0 var(--shadowBlue);
-   height: 25px;
-}
