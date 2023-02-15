@@ -35,29 +35,26 @@
   margin: auto;
   padding: 5em;
   cursor: pointer;
-
 }
-.post-btn{
-  border: none;
-  background: linear-gradient(93.9deg, #c3bcf0 0%, #7ce7ff 100%);
-  box-shadow: 0px 4px 4px var(--shadowBlue);
-  border-radius: 40px;
-  color:white;
+
+.post-btn {
   font-size: 30px;
   font-weight: bolder;
-  width:4em;
-  margin-top:30px;
+  width: 4em;
+  margin-top: 30px;
   cursor: pointer;
 
-    
+
 }
-.caption-txtbox{
-  resize:none;
+
+.caption-txtbox {
+  resize: none;
   padding: 12px 20px;
-  height:4em;
-  
+  height: 4em;
+
 }
-.newpost-caption{
+
+.newpost-caption {
   margin-top: 10px;
   text-align: left;
   width: 400px;
